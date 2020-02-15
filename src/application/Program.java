@@ -43,5 +43,13 @@ System.out.println("- - - Test 4: Seller insert - - -");
 		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.00, department);
 		sellerDAO.insert(newSeller);
 		System.out.println("Inserted! New Id = " + newSeller.getId());
+		
+System.out.println("- - - Test 5: Seller update - - -");
+		
+		seller = sellerDAO.findById(1);
+		seller.setNome("Martha Waine");
+		sellerDAO.update(seller);
+		System.out.println("Update Completed!");
+		System.out.println();
 	}
 }
