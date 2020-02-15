@@ -14,6 +14,10 @@ public class Seller implements Serializable {
 	
 	private Department departamento;
 	
+	public Seller() {
+		
+	}
+	
 	public Seller(Integer id, String nome, String email, Date dataNascimento, Double salarioBase, Department departamento) {
 		this.id = id;
 		this.nome = nome;
@@ -49,6 +53,10 @@ public class Seller implements Serializable {
 	
 	public Date getDataNascimento() {
 		return dataNascimento;
+	}
+	
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento =dataNascimento;
 	}
 	
 	public Double getSalarioBase() {

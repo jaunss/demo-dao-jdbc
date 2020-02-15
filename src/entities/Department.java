@@ -9,11 +9,15 @@ public class Department implements Serializable {
 	private Integer id;
 	private String nome;
 	
+	public Department() {
+		
+	}
+	
 	public Department(Integer id, String nome) {
 		this.id = id;
 		this.nome = nome;
 	}
-	
+
 	public Integer getId() {
 		return id;
 	}
