@@ -1,5 +1,6 @@
 package application;
 
+import java.util.Date;
 import java.util.List;
 
 import entities.Department;
@@ -15,7 +16,8 @@ public class Program {
 		
 		System.out.println("- - - Test 1: Seller findById - - -");
 		Seller seller = sellerDAO.findById(3);
-		System.out.println(seller + "\n");
+		System.out.println(seller);
+		System.out.println();
 		
 		System.out.println("- - - Test 2: Seller findByDepartment - - -");
 		
@@ -23,7 +25,8 @@ public class Program {
 		List<Seller> list = sellerDAO.findByDepartment(department);
 		
 		for (Seller obj : list) {
-			System.out.println(obj + "\n");
+			System.out.println(obj);
+			System.out.println();
 		}
 		
 System.out.println("- - - Test 3: Seller findAll - - -");
@@ -32,6 +35,13 @@ System.out.println("- - - Test 3: Seller findAll - - -");
 		
 		for (Seller obj : list) {
 			System.out.println(obj);
+			System.out.println();
 		}
+		
+System.out.println("- - - Test 4: Seller insert - - -");
+		
+		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.00, department);
+		sellerDAO.insert(newSeller);
+		System.out.println("Inserted! New Id = " + newSeller.getId());
 	}
 }
