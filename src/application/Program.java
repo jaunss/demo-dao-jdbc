@@ -9,10 +9,10 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		Department dp = new Department(1, "Livros");
-		Seller sl = new Seller(2, "Joao", "joaogcm_jb@outlook.com", new Date(), 23400.00, dp);
+		Department obj = new Department(1, "Livros");
+		Seller sl = new Seller(2, "Joao", "joaogcm_jb@outlook.com", new Date(), 23400.00, obj);
 		
-		System.out.println(dp);
+		System.out.println(obj);
 		System.out.println(sl);
 	}
 }
